@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Aminadav Hadari</title>
+	<title>לזכרו של עמינדב הדרי (13 במאי 1958 – 17 במרץ 2026)</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 	<link rel="stylesheet" type="text/css" href="Otherstyle.css">
@@ -12,6 +12,48 @@
 	<link rel="shortcut icon" type="image/png" href="icon.png">
 </head>
 <body>
+	<!-- Memorial entrance overlay -->
+	<div id="memorial-overlay" role="dialog" aria-label="לזכרו של עמינדב הדרי" dir="rtl">
+		<div class="memorial-inner">
+			<div class="memorial-candle">🕯️</div>
+			<div class="memorial-lead">לזכרו של</div>
+			<div class="memorial-name">עמינדב הדרי</div>
+			<div class="memorial-dates">13 במאי 1958 &ndash; 17 במרץ 2026</div>
+			<div class="memorial-enter">כניסה לאתר</div>
+		</div>
+	</div>
+	<style>
+		#memorial-overlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;
+			background:radial-gradient(ellipse at center,#0a2540 0%,#02121f 100%);color:#f4f1ea;text-align:center;
+			font-family:'Times New Roman',Georgia,serif;cursor:pointer;transition:opacity 1s ease;opacity:1;padding:24px;}
+		#memorial-overlay.memorial-hide{opacity:0;pointer-events:none;}
+		#memorial-overlay .memorial-inner{max-width:640px;animation:memorialFade 1.6s ease;}
+		#memorial-overlay .memorial-candle{font-size:52px;line-height:1;margin-bottom:18px;}
+		#memorial-overlay .memorial-lead{font-size:22px;letter-spacing:1px;opacity:.85;}
+		#memorial-overlay .memorial-name{font-size:44px;font-weight:bold;margin:10px 0;letter-spacing:1px;}
+		#memorial-overlay .memorial-dates{font-size:24px;opacity:.9;}
+		#memorial-overlay .memorial-enter{margin-top:40px;font-size:15px;letter-spacing:3px;opacity:.65;
+			border:1px solid rgba(244,241,234,.5);border-radius:30px;padding:10px 26px;display:inline-block;}
+		@keyframes memorialFade{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+	</style>
+	<script>
+		(function(){
+			var o=document.getElementById('memorial-overlay');
+			if(!o) return;
+			if(sessionStorage.getItem('memorialSeen')){o.parentNode.removeChild(o);return;}
+			function dismiss(){
+				if(o.classList.contains('memorial-hide')) return;
+				o.classList.add('memorial-hide');
+				sessionStorage.setItem('memorialSeen','1');
+				setTimeout(function(){ if(o.parentNode) o.parentNode.removeChild(o); },1100);
+			}
+			o.addEventListener('click',dismiss);
+			window.addEventListener('scroll',dismiss,{passive:true});
+			window.addEventListener('keydown',dismiss);
+			setTimeout(dismiss,6000);
+		})();
+	</script>
+
 	<div class="nav1">
 	        <ul>
 	          <li><a href="‏‏indexhebrew.html">Home</a></li>
