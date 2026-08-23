@@ -213,7 +213,7 @@ list-style-type: none;
   position: absolute;
   right: 152px; 
 }
-.copyright>a{
+.copyright>a, .copyright>.credit-name{
   color: #FF5913;
 }
 .WordsPuzzle_DARK_BLUE2{

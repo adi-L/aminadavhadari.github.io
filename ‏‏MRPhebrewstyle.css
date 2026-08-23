@@ -511,7 +511,7 @@ color: rgba(33, 38, 43, 0.8);
   ol{
 list-style-type: none;
 }
-.copyright>a{
+.copyright>a, .copyright>.credit-name{
   color: #FF5913;}
 
 @media only screen and (max-width: 1024px) {

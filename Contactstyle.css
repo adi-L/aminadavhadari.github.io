@@ -167,7 +167,7 @@ li>img{
   position: absolute;
   right: 152px; 
 }
-.copyright>a{
+.copyright>a, .copyright>.credit-name{
   color: #FF5913;}
 }
 

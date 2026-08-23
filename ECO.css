@@ -170,7 +170,7 @@ list-style-type: none;
   position: absolute;
   right: 152px; 
 }
-.copyright>a{
+.copyright>a, .copyright>.credit-name{
   color: #FF5913;}
 
 @media only screen and (max-width: 1280px) {
