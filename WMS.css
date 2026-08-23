@@ -108,7 +108,7 @@ position: relative;
 top: 75px;
 padding: 10px;
 margin: 5px;
-	font-family: 'Times New Roman', serif;
+	font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
     text-align: center;
     font-weight: 500;
     font-size: 53px;
@@ -123,7 +123,7 @@ h1>span{
 	padding: 10px;
 	font-size: 32px;
 	text-align: right;
-  font-family: tahoma, serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
     font-weight: 900;
     line-height: 1.4; 
     text-shadow: 0px 1px 1px #70838C; 
@@ -156,7 +156,7 @@ z-index: 4;}
  	padding: 10px;
  	list-style-type: none;
 	text-align-last: right;
-	 font-family: tahoma, serif;
+	 font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
 	 font-size: 19px;
     font-weight: 900;
     line-height: 1.3;

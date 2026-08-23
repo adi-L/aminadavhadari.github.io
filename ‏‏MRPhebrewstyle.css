@@ -78,13 +78,14 @@ span{font-size: 17px;}
   width: 85%;
   max-width: 900px;
   position: absolute;
-  top: 10vh;
+  /* the 10vh gap is meant to sit below the header, not behind it */
+  top: calc(10vh + var(--site-header-h));
   left: 50%;
   transform: translate(-50%,-0%);
  display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 10px;
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
   font-size: 20px;
   text-align: right;
 }
@@ -98,7 +99,7 @@ span{font-size: 17px;}
 .data1{
   background-image: url('data1.png');
   background-size: 350px 390px;
-   font-family: 'Times New Roman', serif;
+   font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
   font-size: 35px;
   font-weight: 900;
   text-align: left;
@@ -107,7 +108,7 @@ span{font-size: 17px;}
   color: #02304B;
 }
 .text{
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
   font-size: 25px;
 }
 .data2{
@@ -182,7 +183,7 @@ background-color: rgba(12, 28, 30, 0.2);}
   grid-gap: 10px;
   background-image: url('data4.png');
   padding: 10px;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 .chil{
   background-color: rgba(255, 255, 255, 0.8);
@@ -406,7 +407,7 @@ grid-column-start: 2;
   background-repeat: no-repeat;
   background-position: center;
   padding: 10px;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
  } 
 .chi{
   background-color: rgba(255, 255, 255, 0.8);
@@ -495,7 +496,7 @@ grid-column-start: 3;
   margin: 8vh;
   margin-bottom: 10vh;
   border: none;
-  font-family: 'Times New Roman', serif;}
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;}
 .item5>ol>li a{float: left;
   position: relative;
   top: 18px;

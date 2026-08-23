@@ -1,0 +1,45 @@
+/* ============================================================
+   Right-to-left corrections for the Hebrew pages
+   ------------------------------------------------------------
+   Everything here is scoped to <html lang="he">, so this file is
+   inert on the English pages and can be loaded everywhere.
+
+   Deliberately narrow: the pages are hand-positioned, so putting
+   dir="rtl" on <html> would flip layouts that were never built
+   to be flipped. Only the menu is mirrored.
+   ============================================================ */
+
+/* The menu items float left on the English pages, which stacks them from
+   the left edge. Floating right stacks them from the right instead, and
+   because they float in source order the first item lands furthest right —
+   which is where a Hebrew reader starts. */
+html[lang="he"] .nav1 li{
+	float: right;
+}
+
+/* The language switcher sits opposite the items, so it crosses over too. */
+html[lang="he"] .nav1 .language{
+	float: left;
+	margin-right: 0;
+	margin-left: 2%;
+
+	/* Its markup carries dir="rtl", which makes its panel open leftwards from
+	   the button — correct on the English pages, where the button is at the
+	   right edge, but here it would open straight off the side of the screen.
+	   Reading left-to-right sends the panel inwards instead, and it still
+	   lines up with the button on its own. */
+	direction: ltr;
+}
+
+/* The dropdowns are left where they are on purpose. They have no left/right
+   of their own, so each one falls at its button's own edge — which still
+   lands correctly once the buttons move. Giving the list items
+   position:relative to anchor the panels instead makes .nav1>ul's
+   overflow:hidden clip them away entirely, and that overflow is what holds
+   the bar open around the floated items, so it can't simply be dropped. */
+
+@media only screen and (max-width: 518px){
+	html[lang="he"] .nav1 .language{
+		margin-left: 0;
+	}
+}

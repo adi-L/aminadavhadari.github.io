@@ -1,0 +1,85 @@
+/* ============================================================
+   Contact forms — kept, but no longer active
+   ------------------------------------------------------------
+   The forms no longer send anything, so they are shown greyed
+   out and their fields are disabled. Keeping them on the page
+   preserves the original layout; the muted palette and the note
+   at the foot make it clear they aren't taking messages.
+
+   Loaded after each page's own stylesheet, on the six pages
+   that carry a form.
+   ============================================================ */
+
+:root{
+	--form-panel: #e9e9e9;
+	--form-edge: #c6c6c6;
+	--form-label: #8c8c8c;
+	--form-text: #9a9a9a;
+	--form-note: #7d7d7d;
+}
+
+.contact-form{
+	background: var(--form-panel);
+	box-shadow: 0 0 16px rgba(0, 0, 0, .45);
+}
+
+/* The portrait is the one thing in the panel that stays in colour on the
+   pages that show it; everything else recedes. */
+.contact-form .txtb{
+	border-color: var(--form-edge);
+	background: rgba(255, 255, 255, .35);
+}
+
+.contact-form .txtb label{
+	color: var(--form-label);
+	letter-spacing: .04em;
+}
+
+.contact-form .txtb input,
+.contact-form .txtb textarea{
+	color: var(--form-text);
+	cursor: not-allowed;
+}
+
+/* Browsers grey disabled fields their own way — pin it so every browser
+   shows the same thing. */
+.contact-form .txtb input:disabled,
+.contact-form .txtb textarea:disabled{
+	color: var(--form-text);
+	-webkit-text-fill-color: var(--form-text);
+	opacity: 1;
+	background: none;
+}
+
+.contact-form .txtb textarea{
+	resize: none;
+}
+
+/* ---- the note under the fields --------------------------------- */
+
+.form-inactive{
+	margin: 4px 0 0;
+	color: var(--form-note);
+	font-size: 13px;
+	line-height: 1.5;
+	text-align: center;
+}
+
+/* ---- Hebrew pages: right to left ------------------------------- */
+
+.contact-form[dir="rtl"] .txtb label{
+	text-align: right;
+}
+
+.contact-form[dir="rtl"] .txtb input,
+.contact-form[dir="rtl"] .txtb textarea{
+	direction: rtl;
+	text-align: right;
+}
+
+/* The portrait floats right on the English pages, which is where the Hebrew
+   labels now sit — send it to the other side so the two don't collide. */
+.contact-form[dir="rtl"] #Aminadavpic,
+.contact-form[dir="rtl"] #Aminadavpic2{
+	float: left;
+}
