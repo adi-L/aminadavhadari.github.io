@@ -52,7 +52,7 @@ if(box5){
 }
 onScroll();
 
-window.document.body.addEventListener('scroll',(e)=>{
+window.addEventListener('scroll',(e)=>{
 	onScroll(e);
 
 })
