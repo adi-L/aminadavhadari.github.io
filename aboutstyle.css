@@ -790,8 +790,20 @@ margin-left: 1%;
   background-color:rgba(252, 252, 252, 0);}
 .box2{
   position: absolute;
-  left: 11%;
+  /* Sits beside the heading rather than under it: below 518px there is no room
+     between "About me:" and the table for a second stacked block, and the
+     LinkedIn badge was landing on the table's first column. */
+  top: 3%;
+  left: auto;
+  right: 3%;
   background-color:rgba(252, 252, 252, 0);
+}
+.box2 h4{
+  margin: 0;
+}
+.box2 img{
+  width: 95px;
+  height: auto;
 } 
 .item5_1>ol>li a{
 	position: relative;
