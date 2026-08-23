@@ -7,7 +7,11 @@ reviewable bundle of changes) on the website's GitHub repository. Nothing on the
 live site has changed yet — it changes only when you click **Merge**.
 
 **The Pull Request:**
-https://github.com/aminadavhadari/aminadavhadari.github.io/pull/1
+https://github.com/aminadavhadari/aminadavhadari.github.io/pull/2
+
+(The first batch of changes, in pull request #1, is already merged and live.
+Items 1&ndash;5 below came from that one; items 6&ndash;9 are the new ones waiting
+in #2.)
 
 ---
 
