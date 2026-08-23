@@ -147,9 +147,7 @@ background-image: url("photo55.jpg");
 }
 .grid-wrapper {
   position: relative;
-  /* half the fixed header, so the panel centres in the visible area
-     rather than behind the banner and menu */
-  top: calc(50% + var(--site-header-h) / 2);
+  top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 100%;
@@ -628,7 +626,7 @@ li>img{
   /* width 1024 */
 .grid-wrapper {
   position: relative;
-  top: calc(35% + var(--site-header-h) / 2);
+  top: 35%;
   height: 45%;
 }
 .white{
@@ -674,7 +672,7 @@ section .wave{
   width: 100%;}
 .grid-wrapper {
   position: relative;
-  top: calc(40% + var(--site-header-h) / 2);
+  top: 40%;
   height: 58%;
 }
 .WordsPuzzle_DARK_BLUE2{

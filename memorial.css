@@ -160,6 +160,23 @@ body:has(> .container > .section){
 	padding-top: 0;
 }
 
+/* The home and About pages are built from full-height panels that stick to the
+   top of the window as you scroll. They stuck at the very top, which put the
+   first 90-odd pixels of every panel behind the banner and menu — that is where
+   the "About me:" heading lived, and it disappeared completely.
+
+   Sticking them below the header instead, and taking the same amount off their
+   height so they still fill the window, moves everything inside each panel down
+   with it. The alternative was adding the header height to roughly twenty-five
+   separate `top` values across the two stylesheets and their breakpoints.
+
+   Panels that set their own top (the ones that deliberately slide away up the
+   page) are more specific than this rule and keep their own behaviour. */
+.container > .section{
+	top: var(--site-header-h);
+	height: calc(100vh - var(--site-header-h));
+}
+
 /* ---- narrower screens ------------------------------------------ */
 
 @media only screen and (max-width: 960px){
