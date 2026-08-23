@@ -1,17 +1,10 @@
-# Instructions for Dor — publishing the memorial updates
+# Memorial site — record of changes
 
-Hi Dor,
+A running note of what has been changed on **https://aminadavhadari.github.io**
+and why, so there's a plain-language record next to the code.
 
-All the changes you asked for are done and waiting in a **Pull Request** (a
-reviewable bundle of changes) on the website's GitHub repository. Nothing on the
-live site has changed yet — it changes only when you click **Merge**.
-
-**The Pull Request:**
-https://github.com/aminadavhadari/aminadavhadari.github.io/pull/2
-
-(The first batch of changes, in pull request #1, is already merged and live.
-Items 1&ndash;5 below came from that one; items 6&ndash;9 are the new ones waiting
-in #2.)
+Items 1–10 are **live**. Items 11–14 are in an open pull request and go live
+when it is merged.
 
 ---
 
@@ -57,6 +50,31 @@ in #2.)
    matching the home page. Every page also declares its language to the browser
    now (`lang="he"` or `lang="en"`), which is what search engines and screen
    readers use to tell the two versions apart.
+10. **Banner covering the panels** — adding the banner (item 6) pushed it over
+    the top of the sliding panels on the home and About pages, hiding the first
+    ninety-odd pixels of each one — which is where the "About me:" heading lived.
+    The panels now start below the banner and menu instead.
+
+### Not yet live
+
+11. **The credit line at the bottom of every page** — "©2020, Designed & Coded by
+    Dor Hadari". The name was a link, but it pointed nowhere: clicking it opened a
+    blank copy of the page in a new tab. It's now plain text in the same orange.
+    If it should point somewhere real — a LinkedIn page, a portfolio — send the
+    address and it can go back to being a proper link.
+12. **"CREATIVE TEAM" in the footer** — did nothing at all when clicked, on the
+    home and About pages in both languages. It now goes to the home page, the same
+    place the menu's "Home" goes. (Those words are left over from the template the
+    site was built from. The footers on the other pages say "HOMEPAGE" instead, so
+    they could be matched up if that reads better.)
+13. **The footer under the contact form** — showed only the copyright line. The
+    CREATIVE TEAM / ABOUT ME / LINKEDIN row that the site's other footers carry had
+    never been added to it. It's there now, on the home and About pages in both
+    languages.
+14. **The links on the blue wave, home page** — cut in half on a full-size window,
+    and entirely off the bottom of the screen on a smaller one. They sit properly
+    inside the panel now. The blue wave itself had also slid off the bottom of that
+    panel when the banner went in (item 6) — that's back too.
 
 ---
 
@@ -72,22 +90,6 @@ The colours and sizes live in **`memorial.css`**, next to it.
 The site-wide font is set in one place too — **`typography.css`**. To try a
 different one, change the font name in the `--site-font` line there and in the
 `fonts.googleapis.com` link at the top of the pages.
-
----
-
-## How to publish it (2 minutes)
-
-1. Log in to **GitHub** with the account that owns the website
-   (`aminadavhadari`).
-2. Open the Pull Request link above.
-3. Read through it if you like (the "Files changed" tab shows every change).
-4. Click the green **"Merge pull request"** button, then **"Confirm merge"**.
-5. Done. The live site (**https://aminadavhadari.github.io**) updates
-   automatically, usually within about a minute.
-
-> If you don't see a green Merge button, it usually means you're not logged in
-> with an account that has permission on the `aminadavhadari` repository. In that
-> case, log in with the account that owns the site, or let Adi know.
 
 ---
 
@@ -111,10 +113,3 @@ If the site is set up in **Google Search Console**
 
 That asks Google to re-check the page sooner. (If the site isn't in Search
 Console, you can skip this — Google will still update on its own over time.)
-
----
-
-## Questions?
-
-Anything unclear, or if the Merge button isn't there — reach out to Adi and
-he'll help sort it out.
