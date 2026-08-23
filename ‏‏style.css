@@ -10,8 +10,8 @@ html,body
   grid-area: header;
   position: fixed;
   top: 0px;
-  left: 6px;
-  width: 99%;
+  left: 0;
+  width: 100%;
   z-index: 4;
 }
 .nav1>ul {
@@ -147,7 +147,9 @@ background-image: url("photo55.jpg");
 }
 .grid-wrapper {
   position: relative;
-  top: 50%;
+  /* half the fixed header, so the panel centres in the visible area
+     rather than behind the banner and menu */
+  top: calc(50% + var(--site-header-h) / 2);
   left: 50%;
   transform: translate(-50%,-50%);
   width: 100%;
@@ -168,7 +170,7 @@ background-image: url("photo55.jpg");
   position: relative;
   top: -9%;
         text-align: center;
-       font-family: 'Times New Roman', sans-serif;
+       font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
       font-size: 57px;
   color: black;
     line-height: 58px;
@@ -188,13 +190,13 @@ background-image: url("photo55.jpg");
 border-radius: 100%;
 }
 .title {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 50px;
     text-shadow: 2px 2px 6px white;
      background: linear-gradient(to left, rgba(252, 252, 252, 0.2) 70%, rgba(252, 252, 252, 0) 30%);}
 .category {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
     color: rgba(0, 0, 0, 1);
     font-size: 30px;
     font-weight: 900;
@@ -254,7 +256,7 @@ list-style-type: none;
   left: 50%;
   transform: translate(-50%, 0%);
   padding: 10px;
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
   color: #02304B;/*#0a476a*/
   text-align: justify;
   font-size: 18px;
@@ -383,7 +385,7 @@ left: 70%;
   padding: 20px;
   margin: 10px;
 }
-.h1{ font-family: 'Times New Roman', serif;
+.h1{ font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
     color: #02304B;
     text-align: center;
     font-size: 40px;
@@ -392,7 +394,7 @@ left: 70%;
 p{
   position: relative;
   top: -10px;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
   font-size: 26px;
 }
 .btn1{
@@ -401,7 +403,7 @@ p{
   cursor: pointer;
     padding: 10px;
    border: 3px solid white;
-   font-family: 'Times New Roman', serif;
+   font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
    font-size: 20px;
    color: white;
    background-color: #02304B;
@@ -545,7 +547,7 @@ border-radius: 100%;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 0 20px #000000b3;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 .contact-form h1{
   margin-top: 0;
@@ -601,7 +603,7 @@ border-radius: 100%;
 .item55555>ol>li, .item55555>ol>li a{display: inline-block;
   cursor: pointer;
 margin-left: 2%;
-font-family: 'Times New Roman', serif; 
+font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif; 
   font-size: 20px;
   font-weight: 900;
   color: #447684;
@@ -626,7 +628,7 @@ li>img{
   /* width 1024 */
 .grid-wrapper {
   position: relative;
-  top: 35%;
+  top: calc(35% + var(--site-header-h) / 2);
   height: 45%;
 }
 .white{
@@ -672,7 +674,7 @@ section .wave{
   width: 100%;}
 .grid-wrapper {
   position: relative;
-  top: 40%;
+  top: calc(40% + var(--site-header-h) / 2);
   height: 58%;
 }
 .WordsPuzzle_DARK_BLUE2{

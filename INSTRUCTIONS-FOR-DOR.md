@@ -23,11 +23,51 @@ https://github.com/aminadavhadari/aminadavhadari.github.io/pull/1
    on every page, so it shows no matter which page a visitor lands on.
 3. **Contact forms** — the "Contact me" / "צור קשר" heading and the "Send Email"
    button were removed from all three contact forms, so they no longer send email.
-   The forms themselves are kept.
+   The forms themselves are kept, but they are now greyed out and their fields
+   can't be typed into, with a line underneath saying the form is no longer active
+   — so nobody fills one in expecting a reply. On the Hebrew pages the form now
+   reads right-to-left, with Hebrew labels and his photograph moved to the other
+   side so it doesn't sit on top of the text.
 4. **Contact footers** — the phone number and email address were removed (the
    copyright line stays).
 5. **About page** — fixed the text near the flying birds that wasn't appearing;
    it now shows when you scroll to it.
+6. **Memorial banner** — a slim band across the very top of every page, above the
+   menu: a lit candle, *"In loving memory of / Aminadav Hadari 1958–2026"*, and
+   *"זכרונו לברכה — May his memory be a blessing"* at the far end. On Hebrew pages
+   it flips to right-to-left and reads *"לזכרו של / עמינדב הדרי"*. Unlike the
+   entrance screen, this one stays on screen the whole time. On phones it shrinks
+   and the blessing drops away so the name always fits.
+7. **A proper font** — the site used to fall back to Times New Roman, which every
+   computer draws slightly differently and which renders Hebrew badly. All pages
+   now use **Assistant**, a Google font drawn for Hebrew and English together, so
+   both language versions match. (The handwritten sticky notes on the Other
+   Projects page keep their own font on purpose.)
+8. **Menu width** — the menu bar on the home page stopped a few pixels short of
+   the screen on each side. It now runs the full width, like the other pages.
+9. **Hebrew menu** — on the Hebrew pages the menu now reads right-to-left, so it
+   starts at the right edge where a Hebrew reader starts, with the language
+   switcher on the left. Seven of the eight Hebrew pages also still had an
+   *English* menu (Home / About me / Solutions / Contact) even though the Hebrew
+   home page had a Hebrew one; they now all read בית / עליי / פתרונות / צור קשר,
+   matching the home page. Every page also declares its language to the browser
+   now (`lang="he"` or `lang="en"`), which is what search engines and screen
+   readers use to tell the two versions apart.
+
+---
+
+## Changing the memorial wording later
+
+All of the memorial text — the banner **and** the entrance screen, English and
+Hebrew — lives in a single file called **`memorial.js`**, in a block near the top
+marked *"the wording"*. Edit the words there and they change on all 16 pages at
+once. You never need to touch the individual pages.
+
+The colours and sizes live in **`memorial.css`**, next to it.
+
+The site-wide font is set in one place too — **`typography.css`**. To try a
+different one, change the font name in the `--site-font` line there and in the
+`fonts.googleapis.com` link at the top of the pages.
 
 ---
 

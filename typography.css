@@ -1,0 +1,42 @@
+/* ============================================================
+   Site typography
+   ------------------------------------------------------------
+   The site used to fall back to Times New Roman, which the
+   browser draws differently on every machine and which renders
+   Hebrew poorly. Everything now uses Assistant — a Google font
+   drawn for Hebrew and Latin together, so the English and the
+   Hebrew pages match each other.
+
+   Loaded on every page, after the page's own stylesheet.
+   ============================================================ */
+
+:root{
+	--site-font: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+html,
+body{
+	font-family: var(--site-font);
+}
+
+/* The menu, buttons and form fields don't inherit type on their own. */
+.nav1,
+.nav1 a,
+.dropbtn,
+.dropdown-content a,
+button,
+input,
+textarea,
+select{
+	font-family: var(--site-font);
+}
+
+/* Assistant's strokes are lighter than Times at the same weight, so the
+   large display lines need a little more weight to hold their presence. */
+.description1,
+.title,
+.h1,
+h1, h2, h3{
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}

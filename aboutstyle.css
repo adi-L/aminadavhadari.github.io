@@ -141,7 +141,7 @@ span{font-size: 17px;}
   z-index: 3;
 }
 h1{
-  font-family: 'Times New Roman', serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
   font-weight: 800;
   border-bottom: 2px solid brown;
   width: 160%;
@@ -172,14 +172,14 @@ th, td {
   padding: 12px;
 }
 th{ background-color: white;
-   font-family: 'Times New Roman', serif;
+   font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
     text-align: center; 
     font-size: 25px;}
 td{
     color: rgba(0, 0, 0, 1);
     text-align: center;
     text-shadow: 2px 2px 2px white;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
   font-size: 25px;
   line-height: 32px;
 }
@@ -242,14 +242,14 @@ height: 45%;
 }
 .box3>.h1{
 	margin-top: 5.5%;}
-.h1{ font-family: 'Times New Roman', serif;
+.h1{ font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
     color: #02304B;
     text-align: center;
     font-size: 40px;
     font-weight: 900;
     line-height: 1.4;}
 .box3>p{
-  font-family: 'Times New Roman', serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
   font-size: 26px;
 }
 .box4{position: relative;
@@ -288,7 +288,7 @@ height: 45%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  font-family: 'Times New Roman', serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
   background-image: url('connections.png');
   background-size: 300% 300%;
   background-position: center;
@@ -625,7 +625,7 @@ height: 45%;
   display: none;
 }
 .box5>p{
-	font-family: 'Times New Roman', serif;
+	font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
   font-size: 26px;
   line-height: 1.6;
 }
@@ -667,7 +667,7 @@ border-radius: 100%;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 0 20px #000000b3;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 .contact-form h1{
   margin-top: 0;
@@ -726,7 +726,7 @@ border-radius: 100%;
 .item55555>ol>li, .item55555>ol>li a{display: inline-block;
   cursor: pointer;
 margin-left: 2%;
-font-family: 'Times New Roman', serif; 
+font-family: 'Assistant', 'Segoe UI', Arial, Helvetica, sans-serif; 
   font-size: 20px;
   font-weight: 900;
   color: #447684;

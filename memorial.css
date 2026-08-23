@@ -1,0 +1,235 @@
+/* ============================================================
+   Memorial for Aminadav Hadari (13 May 1958 – 17 March 2026)
+   Shared by every page. Loaded AFTER the page's own stylesheet
+   so the .nav1 offset below wins.
+   The wording lives in memorial.js — this file is only looks.
+   ============================================================ */
+
+:root{
+	--memorial-h: 46px;      /* banner height — .nav1 is pushed down by exactly this */
+	--memorial-nav-h: 46px;  /* the site menu, which now sits under the banner */
+
+	/* Everything fixed at the top of the page, banner + menu together. The home
+	   and About pages centre their panels in the full viewport, so they use this
+	   to re-centre in the part of it that is actually visible. */
+	--site-header-h: calc(var(--memorial-h) + var(--memorial-nav-h));
+	--memorial-navy: #02304B;
+	--memorial-navy-deep: #01161F;
+	--memorial-brass: #C9A961;
+	--memorial-parchment: #EDE8DE;
+	--memorial-steel: #8FA8BC;
+}
+
+/* ---- the banner ------------------------------------------------ */
+
+.memorial-bar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: var(--memorial-h);
+	z-index: 9999;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	gap: 13px;
+	padding: 0 18px;
+	background: linear-gradient(180deg, var(--memorial-navy) 0%, var(--memorial-navy-deep) 100%);
+	border-bottom: 1px solid rgba(201, 169, 97, .5);
+	font-family: Georgia, "Times New Roman", serif;
+	color: var(--memorial-parchment);
+	direction: ltr;
+	text-align: left;
+}
+.memorial-bar[dir="rtl"]{
+	direction: rtl;
+	text-align: right;
+}
+
+.memorial-bar .m-candle{
+	flex: none;
+	font-size: 22px;
+	line-height: 1;
+	filter: drop-shadow(0 0 7px rgba(255, 186, 84, .55));
+	animation: memorialFlicker 4.5s ease-in-out infinite;
+}
+
+/* A slow, shallow flicker — a candle that is steady, not restless. */
+@keyframes memorialFlicker{
+	0%, 100%{ filter: drop-shadow(0 0 7px rgba(255, 186, 84, .55)); }
+	45%     { filter: drop-shadow(0 0 4px rgba(255, 186, 84, .35)); }
+	70%     { filter: drop-shadow(0 0 9px rgba(255, 186, 84, .60)); }
+}
+
+.memorial-bar .m-stack{
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+}
+
+.memorial-bar .m-label{
+	font-size: 9px;
+	line-height: 1.2;
+	letter-spacing: .24em;
+	text-transform: uppercase;
+	color: var(--memorial-steel);
+	font-family: Arial, Helvetica, sans-serif;
+	white-space: nowrap;
+}
+.memorial-bar[dir="rtl"] .m-label{
+	letter-spacing: .08em;
+	font-size: 10px;
+}
+
+.memorial-bar .m-name{
+	font-size: 16px;
+	line-height: 1.1;
+	letter-spacing: .03em;
+	white-space: nowrap;
+}
+
+.memorial-bar .m-dates{
+	font-size: 12.5px;
+	color: var(--memorial-brass);
+	letter-spacing: .03em;
+	font-variant-numeric: tabular-nums;
+	margin-left: 8px;
+	white-space: nowrap;
+}
+.memorial-bar[dir="rtl"] .m-dates{
+	margin-left: 0;
+	margin-right: 8px;
+	direction: ltr;
+	display: inline-block;
+}
+
+.memorial-bar .m-blessing{
+	margin-left: auto;
+	text-align: right;
+	font-size: 11.5px;
+	line-height: 1.45;
+	color: #9FB3C4;
+	padding-left: 16px;
+	border-left: 1px solid rgba(201, 169, 97, .28);
+	white-space: nowrap;
+}
+.memorial-bar[dir="rtl"] .m-blessing{
+	margin-left: 0;
+	margin-right: auto;
+	text-align: left;
+	padding-left: 0;
+	padding-right: 16px;
+	border-left: 0;
+	border-right: 1px solid rgba(201, 169, 97, .28);
+}
+
+.memorial-bar .m-blessing .m-heb{
+	display: block;
+	font-size: 13px;
+	color: var(--memorial-brass);
+	letter-spacing: .06em;
+}
+
+/* ---- push the site menu down by exactly the banner height ------ */
+
+.nav1{
+	top: var(--memorial-h);
+}
+
+/* Inner pages start their content at the very top of the document, where the
+   banner and menu now sit. Move the whole page down past them, plus a little
+   breathing room so nothing sits flush against the menu.
+
+   This only moves content that is in normal flow. Pages that place their
+   content with position:absolute measure from the viewport, not from body,
+   so padding here cannot reach them — those are shifted individually in
+   their own stylesheets by half the header, the same way the home page's
+   panels are. (Making body position:relative would catch them all in one
+   rule, but it also changes what a percentage top resolves against, which
+   throws the vertically centred contact form far off.)
+
+   The home and About pages centre their own full-height panels and opt out;
+   they get their spacing from the .grid-wrapper offset in the page's own
+   stylesheet instead. */
+body{
+	padding-top: calc(var(--site-header-h) + 20px);
+}
+body.memorial-no-offset,
+body:has(> .container > .section){
+	padding-top: 0;
+}
+
+/* ---- narrower screens ------------------------------------------ */
+
+@media only screen and (max-width: 960px){
+	:root{ --memorial-h: 38px; }
+	.memorial-bar{ padding: 0 10px; gap: 8px; }
+	.memorial-bar .m-candle{ font-size: 17px; }
+	.memorial-bar .m-label{ font-size: 7.5px; }
+	.memorial-bar[dir="rtl"] .m-label{ font-size: 8.5px; }
+	.memorial-bar .m-name{ font-size: 13px; }
+	.memorial-bar .m-dates{ font-size: 10px; margin-left: 6px; }
+	.memorial-bar[dir="rtl"] .m-dates{ margin-right: 6px; }
+	.memorial-bar .m-blessing{ display: none; }
+}
+
+@media only screen and (max-width: 400px){
+	.memorial-bar .m-label{ display: none; }
+	.memorial-bar .m-name{ font-size: 12.5px; }
+}
+
+/* ============================================================
+   Entrance overlay — shown once per browsing session
+   ============================================================ */
+
+#memorial-overlay{
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	background: radial-gradient(ellipse at center, #0a2540 0%, #02121f 100%);
+	color: #f4f1ea;
+	text-align: center;
+	font-family: Georgia, "Times New Roman", serif;
+	cursor: pointer;
+	opacity: 1;
+	transition: opacity 1s ease;
+}
+#memorial-overlay.memorial-hide{
+	opacity: 0;
+	pointer-events: none;
+}
+#memorial-overlay .memorial-inner{
+	max-width: 640px;
+	animation: memorialFade 1.6s ease;
+}
+#memorial-overlay .memorial-candle{ font-size: 52px; line-height: 1; margin-bottom: 18px; }
+#memorial-overlay .memorial-lead{ font-size: 22px; letter-spacing: 1px; opacity: .85; }
+#memorial-overlay .memorial-name{ font-size: 44px; font-weight: bold; margin: 10px 0; letter-spacing: 1px; }
+#memorial-overlay .memorial-dates{ font-size: 24px; opacity: .9; }
+#memorial-overlay .memorial-enter{
+	display: inline-block;
+	margin-top: 40px;
+	padding: 10px 26px;
+	font-size: 15px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	opacity: .65;
+	border: 1px solid rgba(244, 241, 234, .5);
+	border-radius: 30px;
+}
+
+@keyframes memorialFade{
+	from{ opacity: 0; transform: translateY(12px); }
+	to{ opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce){
+	#memorial-overlay,
+	#memorial-overlay .memorial-inner{ animation: none; transition: none; }
+	.memorial-bar .m-candle{ animation: none; }
+}
